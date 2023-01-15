@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     loader: 'default',
-    path: 'test'
+    path: '/next-app'
   }
 }
 
