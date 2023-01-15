@@ -1,4 +1,4 @@
-import { Project, SlugType } from '../../components/SinglePost';
+import SinglePost, { Project, SlugType } from '../../components/SinglePost';
 
 export async function getServerSideProps(context: { params: { slug: SlugType }}): Promise<{ props: { project: Project } }> {
   const projects: Project[] = [
@@ -10,3 +10,5 @@ export async function getServerSideProps(context: { params: { slug: SlugType }})
 
   return { props: { project: project || error } };
 }
+
+export default SinglePost
