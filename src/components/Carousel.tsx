@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import React, { FC } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel as Slider } from 'react-responsive-carousel';
+
 import CarouselItem, { CarouselItemProps } from './CarouselItem';
 
 const projects: CarouselItemProps[] = [
@@ -18,7 +18,7 @@ interface ArrowProps {
 const Arrow: FC<ArrowProps> = ({ direction, onClick }) => {
   return <button className={`cursor-pointer absolute z-10 top-1/2 transform ${
     direction === 'next' ? 'right-10' : 'left-10 rotate-180'}`} onClick={onClick}>
-    <Image width={14} height={18} src="/assets/arrow.png" alt="carousel-arrow" />
+    {/* <Image width={14} height={18} src="/assets/arrow.png" alt="carousel-arrow" /> */}
   </button>;
 };
 
