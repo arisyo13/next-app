@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import Image from 'next/image';
 
 const Footer: FC = (): JSX.Element => {
   return (
@@ -11,13 +12,13 @@ const Footer: FC = (): JSX.Element => {
       <div className="flex flex-row mt-12 lg:mt-0 justify-between
       md:max-w-xs md:self-center lg:select-none md:gap-28 lg:gap-0 lg:w-72 lg:mx-auto">
         <a href="">
-          {/* <Image src="/assets/linkedin.svg" alt="linkedin" width={20} height={20} /> */}
+          <Image src="/assets/linkedin.svg" alt="linkedin" width={20} height={20} />
         </a>
         <a href="">
-          {/* <Image src="/assets/instagram.svg" alt="instagram" width={20} height={20} /> */}
+          <Image src="/assets/instagram.svg" alt="instagram" width={20} height={20} />
         </a>
         <a href="">
-          {/* <Image src="/assets/behance.svg" alt="behance" width={20} height={20} /> */}
+          <Image src="/assets/behance.svg" alt="behance" width={20} height={20} />
         </a>
       </div>
     </footer>
