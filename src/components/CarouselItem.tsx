@@ -7,7 +7,7 @@ export interface CarouselItemProps {
     image: string;
 }
 
-const CarouselItem: FC<CarouselItemProps> = ({ name, image }) => {
+const CarouselItem: FC<CarouselItemProps> = ({ name }) => {
 
   return (
     <div className="px-8 lg:px-20">

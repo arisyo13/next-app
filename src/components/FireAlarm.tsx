@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 const FireAlarm: FC = (): JSX.Element => {
   return (
     <div className="flex flex-col mx-auto">
-     {/*  <Image
+      {/*  <Image
         className="mx-auto flex"
         src="/assets/projects/fire-project.png"
         width={400}
@@ -13,7 +13,6 @@ const FireAlarm: FC = (): JSX.Element => {
       <h1>Some cool text</h1>
 
     </div>
-
   );
 };
 
