@@ -8,11 +8,11 @@ export type SlugType = 'fire' | 'cinema' | 'pizza';
 export interface Project {
   name: string;
   image?: string;
-  slug: SlugType;
+  slug: SlugType
 }
 
 interface ProjectProps {
-    project: Project
+    project?: Project
   }
 
 const SinglePost: FC<ProjectProps> = ({ project }) => {
