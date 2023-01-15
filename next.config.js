@@ -2,10 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: undefined,
-  images: {
-    loader: 'default',
-    path: '/next-app'
-  }
+  images: undefined
 }
 
 module.exports = nextConfig
