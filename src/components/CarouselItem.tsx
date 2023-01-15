@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import Image from 'next/image';
 
 import NavLink from './NavLink';
 
@@ -7,11 +8,11 @@ export interface CarouselItemProps {
     image: string;
 }
 
-const CarouselItem: FC<CarouselItemProps> = ({ name }) => {
+const CarouselItem: FC<CarouselItemProps> = ({ name, image }) => {
 
   return (
     <div className="px-8 lg:px-20">
-      {/* <Image
+      <Image
         width={400}
         height={280}
         placeholder="empty"
@@ -19,7 +20,7 @@ const CarouselItem: FC<CarouselItemProps> = ({ name }) => {
         className="object-contain w-[320px] h-[200px] lg:w-[400] lg:h-[280px]"
         src={`/assets/projects/${image}.png`}
         alt={name}
-      /> */}
+      />
       <div className="flex flex-col items-end gap-4">
         <h3 className="text-red px-6">{name}</h3>
         <NavLink path={`/projects/${name}`} name="View Project" />
