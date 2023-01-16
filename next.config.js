@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // experimental: undefined
   images: {
-    // formats: ['image/avif', 'image/webp', 'svg', ''],
+    formats: ['image/webp'],
+    loader: 'cloudinary',
     remotePatterns: [
       {
         protocol: 'https',
@@ -15,4 +15,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
