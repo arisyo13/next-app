@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import Image from 'next/image';
 
 import NavLink from './NavLink';
-import { Project, SlugType } from './SinglePost';
+import { Project } from './SinglePost';
 
 const CarouselItem: FC<Project> = ({ name, image, slug }) => {
 

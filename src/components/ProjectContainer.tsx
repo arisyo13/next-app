@@ -3,11 +3,14 @@ import Image from 'next/image';
 
 import { useGetIsMobile } from '../hooks/useGetIsMobile';
 import Carousel from './Carousel';
-
 import photo from '../../public/assets/photo.jpg';
 import { Project } from './SinglePost';
 
-const ProjectContainer: FC<{ projects: Project[] }> = ({ projects}): JSX.Element => {
+export interface ProjectContainerProps {
+  projects: Project[]
+}
+
+const ProjectContainer: FC<ProjectContainerProps> = ({ projects}): JSX.Element => {
   const { isMobile } = useGetIsMobile();
 
   return (
