@@ -5,13 +5,14 @@ import { useGetIsMobile } from '../hooks/useGetIsMobile';
 import Carousel from './Carousel';
 
 import photo from '../../public/assets/photo.jpg';
+import { Project } from './SinglePost';
 
-const ProjectContainer: FC = (): JSX.Element => {
+const ProjectContainer: FC<{ projects: Project[] }> = ({ projects}): JSX.Element => {
   const { isMobile } = useGetIsMobile();
 
   return (
     <div className="relative min-h-[calc(200px)] h-[calc(100vh-100px)] flex flex-col justify-center items-center py-20">
-      <Carousel />
+      <Carousel projects={projects} />
       <div className="flex flex-col z-10 text-start lg:mt-20 lg:mr-6 gap-4 lg:gap-0">
         <h2 className={'text-mid-gray text-xl lg:text-7xl tracking-[0.4em] lg:tracking-[0.8em] font-semibold'}
           dangerouslySetInnerHTML={{ __html: `USE${!isMobile ? '&nbsp&nbsp' : ''}R` }} />

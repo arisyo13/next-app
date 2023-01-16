@@ -3,15 +3,9 @@ import Image from 'next/image';
 import { Carousel as Slider } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
-import CarouselItem, { CarouselItemProps } from './CarouselItem';
+import CarouselItem from './CarouselItem';
 import arrow from '../../public/assets/arrow.png';
-import fireProject from '../../public/assets/projects/fire-project.png';
-
-const projects: CarouselItemProps[] = [
-  { name: 'fire', image: fireProject, path: 'fire' },
-  { name: 'Alarm', image: fireProject, path: 'cinema' },
-  { name: 'Pizza', image: fireProject, path: 'pizza' },
-];
+import { Project } from './SinglePost';
 
 interface ArrowProps {
     direction: 'next' | 'previous',
@@ -25,7 +19,7 @@ const Arrow: FC<ArrowProps> = ({ direction, onClick }) => {
   </button>;
 };
 
-const Carousel: FC = () => {
+const Carousel: FC<{ projects: Project[] }> = ({ projects }) => {
 
   return (
     <div className="w-full">
@@ -38,7 +32,7 @@ const Carousel: FC = () => {
         renderArrowNext={(handler, hasNext) => hasNext && <Arrow direction="next" onClick={handler} />}
         renderArrowPrev={(handler, hasPrev) => hasPrev && <Arrow direction="previous" onClick={handler} />}
       >
-        {projects.map((project, index) => <CarouselItem key={index} {...project} />)}
+        {projects && projects.map((project, index) => <CarouselItem key={index} {...project} />)}
       </Slider>
     </div>
   );

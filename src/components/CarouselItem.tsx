@@ -1,16 +1,10 @@
 import React, { FC } from 'react';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 import NavLink from './NavLink';
-import { SlugType } from './SinglePost';
+import { Project, SlugType } from './SinglePost';
 
-export interface CarouselItemProps {
-    name: string;
-    path: SlugType;
-    image: StaticImageData;
-}
-
-const CarouselItem: FC<CarouselItemProps> = ({ name, image, path }) => {
+const CarouselItem: FC<Project> = ({ name, image, slug }) => {
 
   return (
     <div className="px-8 lg:px-20">
@@ -24,7 +18,7 @@ const CarouselItem: FC<CarouselItemProps> = ({ name, image, path }) => {
       />
       <div className="flex flex-col items-end gap-4">
         <h3 className="text-red px-6">{name}</h3>
-        <NavLink path={path} name="View Project" />
+        <NavLink path={slug} name="View Project" />
       </div>
     </div>
   );
