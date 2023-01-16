@@ -4,7 +4,7 @@ import fireProject from '../../../public/assets/projects/fire-project.png';
 const projects: Project[] = [
   { name: 'Alaaarm', slug: 'fire', image: fireProject },
   { name: 'Cinema', slug: 'cinema', image: fireProject },
-  { name: 'Pizza', slug: 'cinema', image: fireProject  },
+  { name: 'Pizza', slug: 'pizza', image: fireProject  },
 ];
 
 export async function getStaticPaths() {
