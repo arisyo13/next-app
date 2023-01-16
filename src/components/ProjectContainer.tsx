@@ -10,7 +10,7 @@ export interface ProjectContainerProps {
   projects: Project[]
 }
 
-const ProjectContainer: FC<ProjectContainerProps> = ({ projects}): JSX.Element => {
+const ProjectContainer: FC<ProjectContainerProps> = ({ projects }): JSX.Element => {
   const { isMobile } = useGetIsMobile();
 
   return (
