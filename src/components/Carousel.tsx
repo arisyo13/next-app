@@ -5,11 +5,12 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a lo
 
 import CarouselItem, { CarouselItemProps } from './CarouselItem';
 import arrow from '../../public/assets/arrow.png';
+import fireProject from '../../public/assets/projects/fire-project.png';
 
 const projects: CarouselItemProps[] = [
-  { name: 'fire', image: 'fire-project' },
-  { name: 'Alarm', image: 'fire-project' },
-  { name: 'Alarmz', image: 'fire-project' },
+  { name: 'fire', image: fireProject, path: 'fire' },
+  { name: 'Alarm', image: fireProject, path: 'cinema' },
+  { name: 'Pizza', image: fireProject, path: 'pizza' },
 ];
 
 interface ArrowProps {

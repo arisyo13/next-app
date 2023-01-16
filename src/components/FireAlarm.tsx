@@ -7,7 +7,7 @@ const FireAlarm: FC = (): JSX.Element => {
   return (
     <div className="flex flex-col mx-auto">
       <Image
-        className="mx-auto flex"
+        // className="mx-auto flex"
         src={fire}
         width={400}
         height={280}

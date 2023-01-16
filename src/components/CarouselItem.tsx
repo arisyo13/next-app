@@ -1,29 +1,30 @@
 import React, { FC } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 import NavLink from './NavLink';
+import { SlugType } from './SinglePost';
 
 export interface CarouselItemProps {
     name: string;
-    image: string;
+    path: SlugType;
+    image: StaticImageData;
 }
 
-const CarouselItem: FC<CarouselItemProps> = ({ name, image }) => {
+const CarouselItem: FC<CarouselItemProps> = ({ name, image, path }) => {
 
   return (
     <div className="px-8 lg:px-20">
       <Image
         width={400}
         height={280}
-        placeholder="empty"
         priority={true}
         className="object-contain w-[320px] h-[200px] lg:w-[400] lg:h-[280px]"
-        src={`/assets/projects/${image}.png`}
+        src={image}
         alt={name}
       />
       <div className="flex flex-col items-end gap-4">
         <h3 className="text-red px-6">{name}</h3>
-        <NavLink path={image} name="View Project" />
+        <NavLink path={path} name="View Project" />
       </div>
     </div>
   );
