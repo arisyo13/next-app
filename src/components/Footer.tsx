@@ -1,6 +1,10 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
 
+import linkedin from '../../public/assets/linkedin.svg';
+import instagram from '../../public/assets/instagram.svg';
+import behance from '../../public/assets/behance.svg';
+
 const Footer: FC = (): JSX.Element => {
   return (
     <footer className="mx-auto container px-16 lg:px-0 flex flex-col lg:items-center lg:flex-row pb-10 lg:pb-20">
@@ -12,13 +16,13 @@ const Footer: FC = (): JSX.Element => {
       <div className="flex flex-row mt-12 lg:mt-0 justify-between
       md:max-w-xs md:self-center lg:select-none md:gap-28 lg:gap-0 lg:w-72 lg:mx-auto">
         <a href="">
-          <Image src="/assets/linkedin.svg" alt="linkedin" width={20} height={20} />
+          <Image src={linkedin} alt="linkedin" width={20} height={20} />
         </a>
         <a href="">
-          <Image src="/assets/instagram.svg" alt="instagram" width={20} height={20} />
+          <Image src={instagram} alt="instagram" width={20} height={20} />
         </a>
         <a href="">
-          <Image src="/assets/behance.svg" alt="behance" width={20} height={20} />
+          <Image src={behance} alt="behance" width={20} height={20} />
         </a>
       </div>
     </footer>

@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { useGetIsMobile } from '../hooks/useGetIsMobile';
 import Carousel from './Carousel';
 
+import photo from '../../public/assets/photo.jpg'
+
 const ProjectContainer: FC = (): JSX.Element => {
   const { isMobile } = useGetIsMobile();
 
@@ -20,7 +22,7 @@ const ProjectContainer: FC = (): JSX.Element => {
       </div>
       <div className={`absolute
       'top-0 right-2/4 translate-x-1/2 lg:translate-x-6 translate-y-2/3 lg:translate-y-3/4 w-28 h-60 lg:w-44 lg:h-72 transform`}>
-        <Image src="/assets/photo.jpg" alt="hero" fill />
+        <Image src={photo} alt="hero" fill />
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ const CarouselItem: FC<CarouselItemProps> = ({ name, image }) => {
       />
       <div className="flex flex-col items-end gap-4">
         <h3 className="text-red px-6">{name}</h3>
-        <NavLink path={`/projects/${name}`} name="View Project" />
+        <NavLink path={image} name="View Project" />
       </div>
     </div>
   );
