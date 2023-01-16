@@ -7,10 +7,12 @@ const projects: Project[] = [
   { name: 'Pizza', slug: 'pizza', image: fireProject },
 ];
 
-export async function getStaticPaths() {
+export async function getStaticPaths(context: { params: { projects: Project[] } }) {
   const paths = projects.map((post) => ({
     params: { slug: post.slug },
   }));
+
+  console.log({ paths: paths[0].params }, context);
 
   return {
     paths,
