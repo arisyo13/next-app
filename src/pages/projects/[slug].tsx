@@ -12,8 +12,6 @@ export async function getStaticPaths(context: { params: { projects: Project[] } 
     params: { slug: post.slug },
   }));
 
-  console.log({ paths: paths[0].params }, context);
-
   return {
     paths,
     fallback: false, // can also be true or 'blocking'
