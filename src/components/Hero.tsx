@@ -3,7 +3,6 @@ import Image from 'next/image';
 
 import { useGetIsMobile } from '../hooks/useGetIsMobile';
 import NavLink from './NavLink';
-import vercel from '../../public/vercel.svg';
 import photo from '../../public/assets/photo.jpg';
 
 const Hero: FC<{ isAboutPage: boolean }> = ({ isAboutPage }): JSX.Element => {

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useGetIsMobile } from '../hooks/useGetIsMobile';
 import Carousel from './Carousel';
 
-import photo from '../../public/assets/photo.jpg'
+import photo from '../../public/assets/photo.jpg';
 
 const ProjectContainer: FC = (): JSX.Element => {
   const { isMobile } = useGetIsMobile();

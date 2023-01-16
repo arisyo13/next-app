@@ -10,11 +10,9 @@ export async function getStaticPaths() {
     params: { slug: post.slug },
   }));
 
-  console.log({ paths })
-
   return {
     paths,
-    fallback: true, // can also be true or 'blocking'
+    fallback: false, // can also be true or 'blocking'
   };
 }
 

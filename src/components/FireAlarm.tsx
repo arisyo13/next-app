@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
 
-import fire from '../../public/assets/projects/fire-project.png'
+import fire from '../../public/assets/projects/fire-project.png';
 
 const FireAlarm: FC = (): JSX.Element => {
   return (
