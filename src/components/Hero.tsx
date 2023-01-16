@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import { useGetIsMobile } from '../hooks/useGetIsMobile';
 import NavLink from './NavLink';
+import vercel from '../../public/vercel.svg';
 
 const Hero: FC<{ isAboutPage: boolean }> = ({ isAboutPage }): JSX.Element => {
   const { isMobile } = useGetIsMobile();
@@ -31,6 +32,16 @@ const Hero: FC<{ isAboutPage: boolean }> = ({ isAboutPage }): JSX.Element => {
       <div className={`absolute ${isAboutPage ?
         'top-1/2 left-1/4 translate-x-1/2 translate-y-1/2 md:-translate-y-1/2 lg:translate-x-3/4' :
         'top-1/2 right-2/4 translate-x-1/2 translate-y-1/2 lg:-translate-y-2/4 lg:translate-x-4'} w-28 h-60 lg:w-48 lg:h-96 transform`}>
+        <Image
+          alt="Vercel logo"
+          src={vercel}
+          width={1000}
+          height={1000}
+          style={{
+            maxWidth: '100%',
+            height: 'auto',
+          }}
+        />
         <Image width={400} height={300} src="/assets/photo.jpg" priority alt="hero" />
       </div>
 
